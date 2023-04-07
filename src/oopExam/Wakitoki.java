@@ -1,5 +1,7 @@
 package oopExam;
 
 public interface Wakitoki {
-	//create a method
+	
+public void wakitoki();	// void type method
+
 }

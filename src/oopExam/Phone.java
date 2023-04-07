@@ -1,27 +1,37 @@
 package oopExam;
 
-/*
- Points: 70
-
-1) What are the features of Interface you know? use multiple line comments here to describe it. you can use newline (\n) and tab(\t)
- 
-2) if Phone interface, inherit other Interface -- Pager and Wakitoki, use appropriate keywords to inherit them in line 11. if Phone interface can inherit regular class - LandPhone and one abstract class SatelitePhone, use appropriate keywords to inherit them. if not, then ignore it
+/* 
+ In Interface class, variablesare only initialized and it's final. Can’t change. Doesn't have default variables
+ -- Interface can't have constructor
+ --  it contains only abstract method
+ -- support static and default type method
+ -- Interface can't inherit a regular class or an abstract class by Extends keywords
+ -- An interface can inherit more than one Interface (separate by comma) by Extends Keyword
+ -- Interface Class can't inherit  interface class by implementing keywords
  */
+public interface Phone extends Pager, Wakitoki {
 
-public interface Phone {
+	public int age = 63;
 
-/*
- 3) Create a variable and a constructor if possible, if not possible to create variable and constructor, use multiple line comments with explanation
- */
-	
-	
-/*
-4) Create four abstract method interfaceInfo (created below), call, message and camera 
-*/
+	/*
+	  public Phone() {} Interface can't have constructor
+	 */
 	public void interfaceInfo();
-	
-/*
-5) Create 2 non-abstract method - battery and wireless which are implemented inside this interface. Inside sysout print example-- "battery is a --- method from Java --?--" and complete the wireless one
- */
 
+	public abstract void call();
+
+	public void message();
+
+	public void cemera();
+
+	// An Interface class can't support non abstract (implement) method. However it
+	// only support static and default type method
+	
+	public static void battery() {	//static type method
+		System.out.println("Battery is a static type method");
+	}
+	//Default type method
+	public default void wireless() {
+		System.out.println("Wireless is default type method");		//default type method
+	}
 }

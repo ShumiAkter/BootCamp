@@ -1,5 +1,7 @@
 package oopExam;
 
 public interface Pager {
-	//create a method
+	
+	// void type method
+	public void pager();
 }

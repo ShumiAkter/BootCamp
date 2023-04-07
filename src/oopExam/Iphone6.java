@@ -1,36 +1,73 @@
 package oopExam;
 
-/*
-In 2004, Iphone6 come into the market which inherits Iphone5. Implement it. 
-*/
-public class Iphone6 {
+public class Iphone6 extends Iphone5 {
+	
 	/*
-	 * Write a method inside them related to one of the features like compass and
-	 * print out related info. 
-	 * 
-	 * What kind of concept you can use to relate to Iphone1 to 6? Instantiate Iphone6 in TestPhone and show how many methods they can
-	 * call in TestPhone. [points: 70] . 
-	 * 
-	 */
+	 	Overloading
+	---- Overloading allows a class to have more than one method with same name but with different parameter. 
+	---- It doesn't support same parameter.
+	---- Method Overloading occurs during compile time.
 
-	/* First write about method over loading and method overriding with multiple line comments here
-	 * Now, Think about Iphone6. It also has 6 methods with the same name as
-	 * materials(). For example -- They are return type parameterized method (int ramPrice, int
-	 * cameraPrice), another one return type parameterized method (int ramPrice, int cameraPrice, String
-	 * ProcessorPrice), etc. Can you use the void, parameterized(return type), final (return type), or static (return type)
-	 * method here as the same method name? if yes, create them and take more int
-	 * variable of your own. What kind of concept you can use? [points: 70].
-	 * Instantiate the class in TestPhone and initialize those methods. [points:
-	 * 70]. 
-	 * Now think about a regular class Name ConfiguredIphone6 which extends
-	 * Iphone6. Override those methods of Iphone6 and change the logic at your own to show the
-	 * changes. [points: 50]. Show the output in TestPhone (how many methods is
-	 * possible to extends). [points: 50]. 
-	 * 
-	 * Please make sure you organize the code in every class
-	 * 
-	 * Paste the github link for the package
-	 * below
-	 * 
-	 */
-}
+Overriding
+--- Overriding is when different methods exist with the same method name with same parameters or signature 
+--- But with different syntax or logic
+---  Its occurs during run time.
+----  It happen when subclass (ConfiguredIphone6 extends Parent class( Iphone6)
+	*/
+
+	// void type method
+	public void compass() {
+		System.out.println("This is void type method of compass from Iphone6 class");
+	}
+	// Iphone6 is regular class so Iphone6 class extends iphone5 class becasue
+	// Regular class only extends abstract class or regular class by extends keyword
+
+	
+	// void type method
+	public void materials() {
+		System.out.println("This is void type method of materials from Iphone6 class");
+	}
+
+	// return type parameterized method
+	public int materials(int ramPrice, int cameraPrice) {
+		int total01 = ramPrice + cameraPrice;
+		System.out.println("Total prices of materials are: "+total01);
+		return total01;
+	}
+
+	// Return type parameterized method
+	public int materials(int ramPrice, int cameraPrice, String processorPrice) {
+		int total02 = ramPrice + cameraPrice + Integer.parseInt(processorPrice);
+		System.out.println("Total prices of materials are: "+total02);
+		return total02;
+	}
+
+	// void type parameterized method
+	public void materials(int ramPrice, int cameraPrice, String processorPrice, int mousePrice) {
+		int total03 = ramPrice + cameraPrice + Integer.parseInt(processorPrice) + mousePrice;
+		System.out.println("Total prices of materials are: "+total03);
+	}
+
+	// Return type parameterized method
+	public int materials(int ramPrice, int cameraPrice, String processorPrice, int mousePrice, int keyboardPric) {
+		int total04 = ramPrice + cameraPrice + Integer.parseInt(processorPrice) + mousePrice + keyboardPric;
+		System.out.println("Total prices of materials are: "+total04);
+		return total04;
+	}
+	// Static type parameterized method
+	public static int materials(int ramPrice, int cameraPrice, String processorPrice, int mousePrice, int keyboardPrice, int monitorPrice) {
+		int total05 = ramPrice + cameraPrice + Integer.parseInt(processorPrice) + mousePrice + keyboardPrice
+				+ monitorPrice;
+		System.out.println("Total prices of materials are: "+total05);
+		return total05;
+	}
+	// Final type parameterized method
+	public final int materials(int ramPrice, int cameraPrice, int mousePrice, int keyboardPrice, int monitorPrice) {
+	 int total06 = ramPrice + cameraPrice + mousePrice + keyboardPrice+ monitorPrice;
+	 System.out.println("Total prices of materials are: "+total06);
+	 return total06;
+
+	}
+	}
+
+

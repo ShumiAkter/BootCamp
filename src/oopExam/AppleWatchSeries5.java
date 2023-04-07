@@ -1,5 +1,8 @@
 package oopExam;
 
 public class AppleWatchSeries5 {
-	// create a method
+	// void type method
+	public void appleWatchSeries5() {
+		
+	}
 }

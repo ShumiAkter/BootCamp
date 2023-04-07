@@ -1,5 +1,8 @@
 package oopExam;
 
 public abstract  class SatelitePhone {
-	//create a method
+	
+	public abstract void satelitePhone() ;	//// void type method
+		
+	
 }
